@@ -19,7 +19,7 @@ extension UIImageView {
             completionHandler: nil)
     }
 
-    func kfe_setImageWithURLString(URLString: String?, cornerRadius: CGFloat, options: KingfisherManager.Options = KingfisherManager.DefaultOptions, progressBlock: ImageDownloaderProgressBlock) {
+    func kfe_setRoundImageWithURLString(URLString: String?, cornerRadius: CGFloat? = nil, options: KingfisherManager.Options = KingfisherManager.DefaultOptions, progressBlock: ImageDownloaderProgressBlock? = nil) {
 
         guard let URLString = URLString, URL = NSURL(string: URLString) else {
             return
@@ -33,12 +33,11 @@ extension UIImageView {
 
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
 
-                        let roundedImage = image.kfe_roundWithCornerRadius(cornerRadius)
+                        let roundedImage = image.kfe_roundWithCornerRadius(cornerRadius ?? image.size.width/2)
 
                         KingfisherManager.sharedManager.cache.storeImage(roundedImage, originalData: originalData, forKey: URLString, toDisk: true, completionHandler: {
                             self.kfe_setImageWithURLString(URLString)
                         })
-
                     }
                 }
             }
