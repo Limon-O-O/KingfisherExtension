@@ -20,7 +20,8 @@ class ViewController: UIViewController {
         "https://pbs.twimg.com/profile_images/647082562125459456/pmT48eHQ_400x400.jpg",
         "https://www.gravatar.com/avatar/bdbb982ff5d7f08fce5b515b2db5f998?s=64&d=identicon&r=PG&f=1",
         "https://pbs.twimg.com/profile_images/188302352/nasalogo_twitter_400x400.jpg",
-        "https://unsplash.it/g/200/300"
+        "http://tp2.sinaimg.cn/1885190365/180/1292238800/1",
+        "http://tp4.sinaimg.cn/2463797455/180/5720402811/1"
     ]
 
     override func viewDidLoad() {
@@ -40,7 +41,7 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellID, forIndexPath: indexPath) as! CollectionViewCell
-        cell.imageView.kfe_setRoundImageWithURLString(avatarURLStrings[indexPath.row])
+        cell.imageView.kfe_setRoundImageWithURLString(avatarURLStrings[indexPath.row], cornerRadius: 20.0)
         return cell
     }
 }

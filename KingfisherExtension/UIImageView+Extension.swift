@@ -36,6 +36,7 @@ extension UIImageView {
                         let roundedImage = image.kfe_roundWithCornerRadius(cornerRadius ?? image.size.width/2)
 
                         KingfisherManager.sharedManager.cache.storeImage(roundedImage, originalData: originalData, forKey: URLString, toDisk: true, completionHandler: {
+
                             self.kfe_setImageWithURLString(URLString)
                         })
                     }
