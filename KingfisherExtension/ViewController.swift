@@ -41,7 +41,7 @@ extension ViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(cellID, forIndexPath: indexPath) as! CollectionViewCell
-        cell.imageView.kfe_setRoundImageWithURLString(avatarURLStrings[indexPath.row], cornerRadius: 20.0)
+        cell.imageView.kfe_setRoundImageWithURLString(avatarURLStrings[indexPath.row], cornerRadiusRatio: 0.25)
         return cell
     }
 }
