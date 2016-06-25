@@ -8,11 +8,12 @@ KingfisherExtension base on [Kingfisher](https://github.com/onevcat/Kingfisher).
 
 ## Requirements
 
-Swift 2.0, iOS 8.0
+iOS 8.0
+Swift 2.0
 
 ## Usage
 
-1. Make your User conform Avatar protocol.
+1. Make your Transformer conform ImageReducible protocol.
 
 	``` swift
   struct Transformer: ImageReducible {
