@@ -40,7 +40,7 @@ Check the demo for more information.
 ### CocoaPods
 
 ```ruby
-pod 'KingfisherExtension', '~> 0.1'
+pod 'KingfisherExtension', '~> 0.2'
 ```
 
 ## Contact
