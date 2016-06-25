@@ -58,19 +58,19 @@ public protocol ImageReducible {
 
 extension ImageReducible {
 
-    var key: String {
+    public var key: String {
         return style.hashString + URLString
     }
 
-    var originalImageKey: String {
+    public var originalImageKey: String {
         return URLString
     }
 
-    var localStyledImage: UIImage? {
+    public var localStyledImage: UIImage? {
         return KingfisherManager.sharedManager.cache.retrieveImageInMemoryCacheForKey(key) ?? KingfisherManager.sharedManager.cache.retrieveImageInDiskCacheForKey(key)
     }
 
-    var localOriginalImage: UIImage? {
+    public var localOriginalImage: UIImage? {
         return KingfisherManager.sharedManager.cache.retrieveImageInMemoryCacheForKey(originalImageKey) ?? KingfisherManager.sharedManager.cache.retrieveImageInDiskCacheForKey(originalImageKey)
     }
 
@@ -78,8 +78,10 @@ extension ImageReducible {
         return nil
     }
 
-    private func removeImage() {
+    public func removeImage() {
+
         guard !originalImageKey.isEmpty else { return }
+
         KingfisherManager.sharedManager.cache.removeImageForKey(originalImageKey)
         KingfisherManager.sharedManager.cache.removeImageForKey(key)
     }

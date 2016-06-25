@@ -174,10 +174,10 @@
 			isa = PBXGroup;
 			children = (
 				ED2C97F51D1D2C720099CE73 /* KingfisherExtension.h */,
-				ED2C97F71D1D2C720099CE73 /* Info.plist */,
 				ED2C98021D1D2F3F0099CE73 /* ImageStyle.swift */,
 				ED2C98001D1D2CB70099CE73 /* UIImageView+Kingfisher.swift */,
 				ED2C98041D1D2FB00099CE73 /* UIImage+Navi.swift */,
+				ED2C97F71D1D2C720099CE73 /* Info.plist */,
 			);
 			path = KingfisherExtension;
 			sourceTree = "<group>";
