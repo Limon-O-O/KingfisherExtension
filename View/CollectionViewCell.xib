@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionViewCell" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="KingfisherExtension" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="411" height="187"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="411" height="187"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HMB-3a-Ya4">
+                        <rect key="frame" x="30" y="64" width="60" height="60"/>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="Vpu-HA-tz0"/>
+                            <constraint firstAttribute="width" constant="60" id="oti-4J-GBT"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Jc-OH-9oc">
+                        <rect key="frame" x="190" y="64" width="60" height="60"/>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="cSf-Hr-bU1"/>
+                            <constraint firstAttribute="width" constant="60" id="uVe-n5-dLk"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zDj-F4-ou0">
+                        <rect key="frame" x="270" y="64" width="60" height="60"/>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="js1-7c-Y2f"/>
+                            <constraint firstAttribute="height" constant="60" id="oWn-1A-nAh"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NDs-C2-PQ0">
+                        <rect key="frame" x="110" y="64" width="60" height="60"/>
+                        <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="fBP-w8-79G"/>
+                            <constraint firstAttribute="height" constant="60" id="wFo-od-jTh"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="HMB-3a-Ya4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="30" id="5aU-9W-sTK"/>
+                <constraint firstItem="zDj-F4-ou0" firstAttribute="leading" secondItem="9Jc-OH-9oc" secondAttribute="trailing" constant="20" id="67G-1C-krC"/>
+                <constraint firstItem="HMB-3a-Ya4" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="BAw-Un-7kN"/>
+                <constraint firstItem="NDs-C2-PQ0" firstAttribute="leading" secondItem="HMB-3a-Ya4" secondAttribute="trailing" constant="20" id="JSS-Sh-Ar7"/>
+                <constraint firstItem="NDs-C2-PQ0" firstAttribute="centerY" secondItem="HMB-3a-Ya4" secondAttribute="centerY" id="T54-sX-iSc"/>
+                <constraint firstItem="9Jc-OH-9oc" firstAttribute="centerY" secondItem="NDs-C2-PQ0" secondAttribute="centerY" id="ZMu-uw-xud"/>
+                <constraint firstItem="9Jc-OH-9oc" firstAttribute="leading" secondItem="NDs-C2-PQ0" secondAttribute="trailing" constant="20" id="g0X-zN-yu9"/>
+                <constraint firstItem="zDj-F4-ou0" firstAttribute="centerY" secondItem="NDs-C2-PQ0" secondAttribute="centerY" id="wU8-CA-S3J"/>
+            </constraints>
+            <size key="customSize" width="411" height="187"/>
+            <connections>
+                <outlet property="imageView" destination="HMB-3a-Ya4" id="7Oj-D4-k7h"/>
+                <outlet property="imageView1" destination="NDs-C2-PQ0" id="6Ab-Tk-7Cr"/>
+                <outlet property="imageView2" destination="9Jc-OH-9oc" id="rot-oW-Zxk"/>
+                <outlet property="imageView3" destination="zDj-F4-ou0" id="wjs-zI-UHs"/>
+            </connections>
+            <point key="canvasLocation" x="431.5" y="329.5"/>
+        </collectionViewCell>
+    </objects>
+</document>
