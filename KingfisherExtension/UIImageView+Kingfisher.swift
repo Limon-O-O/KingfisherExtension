@@ -110,8 +110,12 @@ public extension UIImageView {
             image = transformer.placeholderImage
 
             KingfisherManager.sharedManager.downloader.downloadImageWithURL(URL, options: [.BackgroundDecode], progressBlock: nil) { [weak self] image, error, imageURL, originalData in
+
                 guard let originalImage = image else { return }
+
                 self?.showImage(originalImage, transformer: transformer, completionHandler: completionHandler)
+
+                KingfisherManager.sharedManager.cache.storeImage(originalImage, originalData: originalData, forKey: URL.absoluteString, toDisk: true, completionHandler: nil)
             }
         }
     }
