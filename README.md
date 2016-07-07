@@ -6,9 +6,12 @@
 
 KingfisherExtension base on [Kingfisher](https://github.com/onevcat/Kingfisher). Remake image before caching by style.
 
+![](http://ww4.sinaimg.cn/large/006tNc79jw1f5l757g4qoj30af0ijdie.jpg)
+
 ## Requirements
 
 iOS 8.0
+
 Swift 2.0
 
 ## Usage
@@ -40,7 +43,7 @@ Check the demo for more information.
 ### CocoaPods
 
 ```ruby
-pod 'KingfisherExtension', '~> 0.2'
+pod 'KingfisherExtension', '~> 0.3'
 ```
 
 ## Contact
