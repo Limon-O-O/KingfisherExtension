@@ -14,6 +14,7 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView1: UIImageView!
     @IBOutlet weak var imageView2: UIImageView!
     @IBOutlet weak var imageView3: UIImageView!
+    @IBOutlet weak var button: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()

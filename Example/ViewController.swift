@@ -43,6 +43,8 @@ extension ViewController: UICollectionViewDataSource {
         cell.imageView2.kfe_setImage(byTransformer: transformer2)
         cell.imageView3.kfe_setImage(byTransformer: transformer3)
 
+        cell.button.kfe_setImage(byTransformer: transformer3)
+
         return cell
     }
 }
