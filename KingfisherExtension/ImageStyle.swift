@@ -1,6 +1,6 @@
 //
 //  ImageStyle.swift
-//  Example
+//  KingfisherExtension
 //
 //  Created by Limon on 6/24/16.
 //  Copyright © 2016 KingfisherExtension. All rights reserved.
@@ -49,14 +49,14 @@ public enum ImageStyle: Equatable {
     }
 }
 
-public protocol ImageReducible {
+public protocol ImageResizable {
 
     var URLString: String { get }
     var style: ImageStyle { get }
     var placeholderImage: UIImage? { get }
 }
 
-extension ImageReducible {
+extension ImageResizable {
 
     public var key: String {
         return style.hashString + URLString

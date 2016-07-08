@@ -1,6 +1,6 @@
 //
 //  UIImage+Navi.swift
-//  Example
+//  KingfisherExtension
 //
 //  Created by Limon on 6/24/16.
 //  Copyright © 2016 KingfisherExtension. All rights reserved.

@@ -21,7 +21,7 @@ struct Transformer {
     let style: ImageStyle
 }
 
-extension Transformer: ImageReducible {
+extension Transformer: ImageResizable {
     var placeholderImage: UIImage? {
 
         switch style {

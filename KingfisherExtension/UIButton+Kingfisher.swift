@@ -1,6 +1,6 @@
 //
 //  UIButton+Kingfisher.swift
-//  Example
+//  KingfisherExtension
 //
 //  Created by Limon on 7/6/16.
 //  Copyright © 2016 KingfisherExtension. All rights reserved.
@@ -73,57 +73,24 @@ extension UIButton {
 
 }
 
+extension UIButton {
 
-// MARK: Image Resize
+    public func kfe_setImage(byTransformer transformer: ImageResizable, forState state: UIControlState = .Normal, toDisk: Bool = true, completionHandler: ((image: UIImage?) -> Void)? = nil) {
 
-extension UIButton: ImageResizeable {
+        kfe_setImage(byTransformer: transformer, action: { [weak self] image in
 
-    public func kfe_setImage(byTransformer transformer: ImageReducible, forState state: UIControlState = .Normal, completionHandler: ((image: UIImage?) -> Void)? = nil) {
-        kfe_setImage(byTransformer: transformer, forState: state, isSetingBackgroundImage: false, completionHandler: completionHandler)
+            self?.setImage(image, forState: state)
+
+        }, toDisk: toDisk, completionHandler: completionHandler)
     }
 
-    public func kfe_setBackgroundImage(byTransformer transformer: ImageReducible, forState state: UIControlState = .Normal, completionHandler: ((image: UIImage?) -> Void)? = nil) {
-        kfe_setImage(byTransformer: transformer, forState: state, isSetingBackgroundImage: true, completionHandler: completionHandler)
+    public func kfe_setBackgroundImage(byTransformer transformer: ImageResizable, forState state: UIControlState = .Normal, toDisk: Bool = true, completionHandler: ((image: UIImage?) -> Void)? = nil) {
+
+        kfe_setImage(byTransformer: transformer, action: { [weak self] image in
+
+            self?.setBackgroundImage(image, forState: state)
+
+        }, toDisk: toDisk, completionHandler: completionHandler)
     }
 
-    private func kfe_setImage(byTransformer transformer: ImageReducible, forState state: UIControlState = .Normal, isSetingBackgroundImage: Bool, completionHandler: ((image: UIImage?) -> Void)? = nil) {
-
-        guard let URL = NSURL(string: transformer.URLString) else {
-            isSetingBackgroundImage ? setBackgroundImage(nil, forState: state) : setImage(nil, forState: state)
-            completionHandler?(image: nil)
-            return
-        }
-
-        if let localStyledImage = transformer.localStyledImage {
-
-            isSetingBackgroundImage ? setBackgroundImage(localStyledImage, forState: state) : setImage(localStyledImage, forState: state)
-            completionHandler?(image: localStyledImage)
-
-        } else if let localOriginalImage = transformer.localOriginalImage {
-
-            resizeImage(byOriginalImage: localOriginalImage, transformer: transformer, action: { [weak self] reducedImage in
-
-                guard let strongSelf = self else { return }
-                isSetingBackgroundImage ? strongSelf.setBackgroundImage(reducedImage, forState: state) : strongSelf.setImage(reducedImage, forState: state)
-
-            }, completionHandler: completionHandler)
-
-        } else {
-
-            setImage(transformer.placeholderImage, forState: state)
-
-            KingfisherManager.sharedManager.downloader.downloadImageWithURL(URL, options: [.BackgroundDecode], progressBlock: nil) { [weak self] image, error, imageURL, originalData in
-
-                guard let originalImage = image, strongSelf = self else { return }
-
-                strongSelf.resizeImage(byOriginalImage: originalImage, transformer: transformer, action: { reducedImage in
-
-                    isSetingBackgroundImage ? strongSelf.setBackgroundImage(reducedImage, forState: state) : strongSelf.setImage(reducedImage, forState: state)
-
-                }, completionHandler: completionHandler)
-
-                KingfisherManager.sharedManager.cache.storeImage(originalImage, originalData: originalData, forKey: URL.absoluteString, toDisk: true, completionHandler: nil)
-            }
-        }
-    }
 }

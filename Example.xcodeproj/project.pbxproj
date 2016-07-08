@@ -25,7 +25,7 @@
 		ED2C98051D1D2FB00099CE73 /* UIImage+Navi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C98041D1D2FB00099CE73 /* UIImage+Navi.swift */; };
 		ED2C98071D1D30AC0099CE73 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C98061D1D30AC0099CE73 /* Transformer.swift */; };
 		ED5E62101D2D126B00551706 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E620F1D2D126B00551706 /* UIButton+Kingfisher.swift */; };
-		ED5E62121D2E05BC00551706 /* ImageResizeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E62111D2E05BC00551706 /* ImageResizeable.swift */; };
+		ED5E62121D2E05BC00551706 /* UIView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E62111D2E05BC00551706 /* UIView+Kingfisher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,7 @@
 		ED2C98041D1D2FB00099CE73 /* UIImage+Navi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Navi.swift"; sourceTree = "<group>"; };
 		ED2C98061D1D30AC0099CE73 /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		ED5E620F1D2D126B00551706 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
-		ED5E62111D2E05BC00551706 /* ImageResizeable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResizeable.swift; sourceTree = "<group>"; };
+		ED5E62111D2E05BC00551706 /* UIView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Kingfisher.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,7 +180,7 @@
 				ED2C97F51D1D2C720099CE73 /* KingfisherExtension.h */,
 				ED2C98021D1D2F3F0099CE73 /* ImageStyle.swift */,
 				ED2C98041D1D2FB00099CE73 /* UIImage+Navi.swift */,
-				ED5E62111D2E05BC00551706 /* ImageResizeable.swift */,
+				ED5E62111D2E05BC00551706 /* UIView+Kingfisher.swift */,
 				ED5E620F1D2D126B00551706 /* UIButton+Kingfisher.swift */,
 				ED2C98001D1D2CB70099CE73 /* UIImageView+Kingfisher.swift */,
 				ED2C97F71D1D2C720099CE73 /* Info.plist */,
@@ -399,7 +399,7 @@
 			files = (
 				ED2C98011D1D2CB70099CE73 /* UIImageView+Kingfisher.swift in Sources */,
 				ED2C98031D1D2F3F0099CE73 /* ImageStyle.swift in Sources */,
-				ED5E62121D2E05BC00551706 /* ImageResizeable.swift in Sources */,
+				ED5E62121D2E05BC00551706 /* UIView+Kingfisher.swift in Sources */,
 				ED2C98051D1D2FB00099CE73 /* UIImage+Navi.swift in Sources */,
 				ED5E62101D2D126B00551706 /* UIButton+Kingfisher.swift in Sources */,
 			);
