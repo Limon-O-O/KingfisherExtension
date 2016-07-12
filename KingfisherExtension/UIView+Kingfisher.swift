@@ -36,7 +36,9 @@ extension UIView {
 
     func kfe_setImage(byTransformer transformer: ImageResizable, action: (image: UIImage?) -> Void, toDisk: Bool, completionHandler: ((image: UIImage?) -> Void)?) {
 
-        guard let URL = NSURL(string: transformer.URLString) else {
+        guard !transformer.URLString.isEmpty, let URL = NSURL(string: transformer.URLString) else {
+
+            print("[KingfisherExtension] \((#file as NSString).lastPathComponent)[\(#line)], \(#function): Image Downlaod error: URL Error")
 
             action(image: nil)
             completionHandler?(image: nil)

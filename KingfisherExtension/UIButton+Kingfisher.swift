@@ -42,7 +42,8 @@ extension UIButton {
                                    completionHandler: Kingfisher.CompletionHandler? = nil) -> RetrieveImageTask?
     {
 
-        guard let URLString = URLString, URL = NSURL(string: URLString) else {
+        guard let URLString = URLString, URL = NSURL(string: URLString) where !URLString.isEmpty else {
+            print("[KingfisherExtension] \((#file as NSString).lastPathComponent)[\(#line)], \(#function): Image Downlaod error: URL Error")
             isSetingBackgroundImage ? setBackgroundImage(nil, forState: state) : setImage(nil, forState: state)
             return nil
         }
