@@ -67,11 +67,11 @@ extension ImageResizable {
     }
 
     public var localStyledImage: UIImage? {
-        return KingfisherManager.sharedManager.cache.retrieveImageInMemoryCacheForKey(key) ?? KingfisherManager.sharedManager.cache.retrieveImageInDiskCacheForKey(key)
+        return KingfisherManager.sharedManager.cache.retrieveImageInMemoryCacheForKey(key) ?? KingfisherManager.sharedManager.cache.retrieveImageInDiskCacheForKey(key, scale: UIScreen.mainScreen().scale)
     }
 
     public var localOriginalImage: UIImage? {
-        return KingfisherManager.sharedManager.cache.retrieveImageInMemoryCacheForKey(originalImageKey) ?? KingfisherManager.sharedManager.cache.retrieveImageInDiskCacheForKey(originalImageKey)
+        return KingfisherManager.sharedManager.cache.retrieveImageInMemoryCacheForKey(originalImageKey) ?? KingfisherManager.sharedManager.cache.retrieveImageInDiskCacheForKey(originalImageKey, scale: UIScreen.mainScreen().scale)
     }
 
     public var placeholderImage: UIImage? {
