@@ -71,7 +71,7 @@ extension ImageResizable {
     }
 
     public var localOriginalImage: UIImage? {
-        return KingfisherManager.sharedManager.cache.retrieveImageInMemoryCacheForKey(originalImageKey) ?? KingfisherManager.sharedManager.cache.retrieveImageInDiskCacheForKey(originalImageKey, scale: UIScreen.mainScreen().scale)
+        return KingfisherManager.sharedManager.cache.retrieveImageInMemoryCacheForKey(originalImageKey) ?? KingfisherManager.sharedManager.cache.retrieveImageInDiskCacheForKey(originalImageKey)
     }
 
     public var placeholderImage: UIImage? {
