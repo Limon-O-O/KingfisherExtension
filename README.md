@@ -49,7 +49,7 @@ pod 'KingfisherExtension', '~> 0.3.2'
 
 ## Contact
 
-Contact me on [Twitter](https://twitter.com/Limon______) or [Weibo](http://weibo.com/u/1783821582) . If you find an issue, just open a ticket on it. Pull requests are warmly welcome as well.
+Contact me on [Twitter](https://twitter.com/Limon______) or [Weibo](http://weibo.com/u/1783821582) . If you find an issue, just [open a ticket] on it(https://github.com/Limon-O-O/KingfisherExtension/issues/new). Pull requests are warmly welcome as well.
 
 ## License
 
