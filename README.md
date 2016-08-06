@@ -1,4 +1,7 @@
-[![](https://img.shields.io/cocoapods/v/KingfisherExtension.svg?style=flat)](http://cocoadocs.org/docsets/KingfisherExtension)
+<p>
+<a href="http://cocoadocs.org/docsets/KingfisherExtension"><img src="https://img.shields.io/cocoapods/v/KingfisherExtension.svg?style=flat"></a>
+<a href="https://raw.githubusercontent.com/Limon-O-O/KingfisherExtension/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/KingfisherExtension.svg?style=flat"></a>
+</p>
 
 # KingfisherExtension
 
@@ -51,5 +54,3 @@ Contact me on [Twitter](https://twitter.com/Limon______) or [Weibo](http://weibo
 ## License
 
 KingfisherExtension is available under the MIT license. See the LICENSE file for more info.
-
-
