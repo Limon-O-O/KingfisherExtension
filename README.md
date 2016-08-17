@@ -1,6 +1,7 @@
 <p>
 <a href="http://cocoadocs.org/docsets/KingfisherExtension"><img src="https://img.shields.io/cocoapods/v/KingfisherExtension.svg?style=flat"></a>
 <a href="https://raw.githubusercontent.com/Limon-O-O/KingfisherExtension/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/KingfisherExtension.svg?style=flat"></a>
+<a href="https://github.com/Carthage/Carthage/"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 </p>
 
 # KingfisherExtension
