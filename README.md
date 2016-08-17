@@ -45,13 +45,13 @@ Check the demo for more information.
 ### CocoaPods
 
 ```ruby
-pod 'KingfisherExtension', '~> 0.3.2'
+pod 'KingfisherExtension', '~> 0.3.3'
 ```
 
 ### Carthage
 
 ```swift
-github "patricks/KingfisherExtension"
+github "Limon-O-O/KingfisherExtension"
 ```
 
 ## Contact
