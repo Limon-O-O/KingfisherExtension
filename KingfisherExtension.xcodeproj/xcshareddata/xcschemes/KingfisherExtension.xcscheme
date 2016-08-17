@@ -17,7 +17,7 @@
                BlueprintIdentifier = "ED2C97F21D1D2C720099CE73"
                BuildableName = "KingfisherExtension.framework"
                BlueprintName = "KingfisherExtension"
-               ReferencedContainer = "container:Example.xcodeproj">
+               ReferencedContainer = "container:KingfisherExtension.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -48,7 +48,7 @@
             BlueprintIdentifier = "ED2C97F21D1D2C720099CE73"
             BuildableName = "KingfisherExtension.framework"
             BlueprintName = "KingfisherExtension"
-            ReferencedContainer = "container:Example.xcodeproj">
+            ReferencedContainer = "container:KingfisherExtension.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,7 +66,7 @@
             BlueprintIdentifier = "ED2C97F21D1D2C720099CE73"
             BuildableName = "KingfisherExtension.framework"
             BlueprintName = "KingfisherExtension"
-            ReferencedContainer = "container:Example.xcodeproj">
+            ReferencedContainer = "container:KingfisherExtension.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

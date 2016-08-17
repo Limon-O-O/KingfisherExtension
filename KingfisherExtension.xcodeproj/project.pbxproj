@@ -59,7 +59,7 @@
 		68A1A06C2B0061038E6E410B /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8154E55F8D471779393BB161 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		E9CB185DF53A7CBB9D53E077 /* Pods-KingfisherExtension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KingfisherExtension.release.xcconfig"; path = "Pods/Target Support Files/Pods-KingfisherExtension/Pods-KingfisherExtension.release.xcconfig"; sourceTree = "<group>"; };
-		ED2C97D11D1D2A420099CE73 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED2C97D11D1D2A420099CE73 /* KingfisherExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KingfisherExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2C97D41D1D2A420099CE73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED2C97D61D1D2A420099CE73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED2C97D91D1D2A420099CE73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 		ED2C97D21D1D2A420099CE73 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED2C97D11D1D2A420099CE73 /* Example.app */,
+				ED2C97D11D1D2A420099CE73 /* KingfisherExtension.app */,
 				ED2C97F31D1D2C720099CE73 /* KingfisherExtension.framework */,
 			);
 			name = Products;
@@ -221,7 +221,7 @@
 			);
 			name = Example;
 			productName = Example;
-			productReference = ED2C97D11D1D2A420099CE73 /* Example.app */;
+			productReference = ED2C97D11D1D2A420099CE73 /* KingfisherExtension.app */;
 			productType = "com.apple.product-type.application";
 		};
 		ED2C97F21D1D2C720099CE73 /* KingfisherExtension */ = {
@@ -262,7 +262,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED2C97CC1D1D2A420099CE73 /* Build configuration list for PBXProject "Example" */;
+			buildConfigurationList = ED2C97CC1D1D2A420099CE73 /* Build configuration list for PBXProject "KingfisherExtension" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -528,7 +528,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = top.limon.Example;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KingfisherExtension;
 			};
 			name = Debug;
 		};
@@ -542,7 +542,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = top.limon.Example;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = KingfisherExtension;
 			};
 			name = Release;
 		};
@@ -596,7 +596,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED2C97CC1D1D2A420099CE73 /* Build configuration list for PBXProject "Example" */ = {
+		ED2C97CC1D1D2A420099CE73 /* Build configuration list for PBXProject "KingfisherExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED2C97E11D1D2A420099CE73 /* Debug */,
