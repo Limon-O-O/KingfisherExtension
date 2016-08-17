@@ -7,80 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED2C97D51D1D2A420099CE73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C97D41D1D2A420099CE73 /* AppDelegate.swift */; };
-		ED2C97D71D1D2A420099CE73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C97D61D1D2A420099CE73 /* ViewController.swift */; };
-		ED2C97DA1D1D2A420099CE73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2C97D81D1D2A420099CE73 /* Main.storyboard */; };
-		ED2C97DC1D1D2A420099CE73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2C97DB1D1D2A420099CE73 /* Assets.xcassets */; };
-		ED2C97DF1D1D2A420099CE73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2C97DD1D1D2A420099CE73 /* LaunchScreen.storyboard */; };
-		ED2C97E71D1D2C140099CE73 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C97E61D1D2C140099CE73 /* Utilities.swift */; };
-		ED2C97EB1D1D2C350099CE73 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C97E91D1D2C350099CE73 /* CollectionViewCell.swift */; };
-		ED2C97EC1D1D2C350099CE73 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ED2C97EA1D1D2C350099CE73 /* CollectionViewCell.xib */; };
 		ED2C97F61D1D2C720099CE73 /* KingfisherExtension.h in Headers */ = {isa = PBXBuildFile; fileRef = ED2C97F51D1D2C720099CE73 /* KingfisherExtension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		ED2C97FA1D1D2C720099CE73 /* KingfisherExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2C97F31D1D2C720099CE73 /* KingfisherExtension.framework */; };
-		ED2C97FB1D1D2C720099CE73 /* KingfisherExtension.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED2C97F31D1D2C720099CE73 /* KingfisherExtension.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED2C98011D1D2CB70099CE73 /* UIImageView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C98001D1D2CB70099CE73 /* UIImageView+Kingfisher.swift */; };
 		ED2C98031D1D2F3F0099CE73 /* ImageStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C98021D1D2F3F0099CE73 /* ImageStyle.swift */; };
 		ED2C98051D1D2FB00099CE73 /* UIImage+Navi.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C98041D1D2FB00099CE73 /* UIImage+Navi.swift */; };
-		ED2C98071D1D30AC0099CE73 /* Transformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C98061D1D30AC0099CE73 /* Transformer.swift */; };
 		ED5E62101D2D126B00551706 /* UIButton+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E620F1D2D126B00551706 /* UIButton+Kingfisher.swift */; };
 		ED5E62121D2E05BC00551706 /* UIView+Kingfisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5E62111D2E05BC00551706 /* UIView+Kingfisher.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		ED2C97F81D1D2C720099CE73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = ED2C97C91D1D2A420099CE73 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = ED2C97F21D1D2C720099CE73;
-			remoteInfo = KingfisherExtension;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		ED2C97FF1D1D2C720099CE73 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				ED2C97FB1D1D2C720099CE73 /* KingfisherExtension.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		ED2C97D11D1D2A420099CE73 /* KingfisherExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KingfisherExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED2C97D41D1D2A420099CE73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED2C97D61D1D2A420099CE73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ED2C97D91D1D2A420099CE73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ED2C97DB1D1D2A420099CE73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ED2C97DE1D1D2A420099CE73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		ED2C97E01D1D2A420099CE73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED2C97E61D1D2C140099CE73 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		ED2C97E91D1D2C350099CE73 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		ED2C97EA1D1D2C350099CE73 /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		ED2C97F31D1D2C720099CE73 /* KingfisherExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KingfisherExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2C97F51D1D2C720099CE73 /* KingfisherExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KingfisherExtension.h; sourceTree = "<group>"; };
 		ED2C97F71D1D2C720099CE73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED2C98001D1D2CB70099CE73 /* UIImageView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Kingfisher.swift"; sourceTree = "<group>"; };
 		ED2C98021D1D2F3F0099CE73 /* ImageStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStyle.swift; sourceTree = "<group>"; };
 		ED2C98041D1D2FB00099CE73 /* UIImage+Navi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Navi.swift"; sourceTree = "<group>"; };
-		ED2C98061D1D30AC0099CE73 /* Transformer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transformer.swift; sourceTree = "<group>"; };
 		ED5E620F1D2D126B00551706 /* UIButton+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		ED5E62111D2E05BC00551706 /* UIView+Kingfisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Kingfisher.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ED2C97CE1D1D2A420099CE73 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED2C97FA1D1D2C720099CE73 /* KingfisherExtension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		ED2C97EF1D1D2C720099CE73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,7 +40,6 @@
 		ED2C97C81D1D2A420099CE73 = {
 			isa = PBXGroup;
 			children = (
-				ED2C97D31D1D2A420099CE73 /* Example */,
 				ED2C97F41D1D2C720099CE73 /* KingfisherExtension */,
 				ED2C97D21D1D2A420099CE73 /* Products */,
 			);
@@ -103,43 +48,9 @@
 		ED2C97D21D1D2A420099CE73 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED2C97D11D1D2A420099CE73 /* KingfisherExtension.app */,
 				ED2C97F31D1D2C720099CE73 /* KingfisherExtension.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		ED2C97D31D1D2A420099CE73 /* Example */ = {
-			isa = PBXGroup;
-			children = (
-				ED2C97D81D1D2A420099CE73 /* Main.storyboard */,
-				ED2C97D41D1D2A420099CE73 /* AppDelegate.swift */,
-				ED2C97D61D1D2A420099CE73 /* ViewController.swift */,
-				ED2C98061D1D30AC0099CE73 /* Transformer.swift */,
-				ED2C97E61D1D2C140099CE73 /* Utilities.swift */,
-				ED2C97E81D1D2C350099CE73 /* View */,
-				ED2C97ED1D1D2C450099CE73 /* Supporting Files */,
-			);
-			path = Example;
-			sourceTree = "<group>";
-		};
-		ED2C97E81D1D2C350099CE73 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				ED2C97E91D1D2C350099CE73 /* CollectionViewCell.swift */,
-				ED2C97EA1D1D2C350099CE73 /* CollectionViewCell.xib */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		ED2C97ED1D1D2C450099CE73 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				ED2C97DB1D1D2A420099CE73 /* Assets.xcassets */,
-				ED2C97DD1D1D2A420099CE73 /* LaunchScreen.storyboard */,
-				ED2C97E01D1D2A420099CE73 /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		ED2C97F41D1D2C720099CE73 /* KingfisherExtension */ = {
@@ -170,28 +81,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		ED2C97D01D1D2A420099CE73 /* Example */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = ED2C97E31D1D2A420099CE73 /* Build configuration list for PBXNativeTarget "Example" */;
-			buildPhases = (
-				321790F1AD59DA78F6B48949 /* [CP] Check Pods Manifest.lock */,
-				ED2C97CD1D1D2A420099CE73 /* Sources */,
-				ED2C97CE1D1D2A420099CE73 /* Frameworks */,
-				ED2C97CF1D1D2A420099CE73 /* Resources */,
-				3A2F48C336488493BAC22387 /* [CP] Embed Pods Frameworks */,
-				81B0A68CEACEB4AD84C09370 /* [CP] Copy Pods Resources */,
-				ED2C97FF1D1D2C720099CE73 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				ED2C97F91D1D2C720099CE73 /* PBXTargetDependency */,
-			);
-			name = Example;
-			productName = Example;
-			productReference = ED2C97D11D1D2A420099CE73 /* KingfisherExtension.app */;
-			productType = "com.apple.product-type.application";
-		};
 		ED2C97F21D1D2C720099CE73 /* KingfisherExtension */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = ED2C97FC1D1D2C720099CE73 /* Build configuration list for PBXNativeTarget "KingfisherExtension" */;
@@ -220,9 +109,6 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = KingfisherExtension;
 				TargetAttributes = {
-					ED2C97D01D1D2A420099CE73 = {
-						CreatedOnToolsVersion = 7.3.1;
-					};
 					ED2C97F21D1D2C720099CE73 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -241,24 +127,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ED2C97D01D1D2A420099CE73 /* Example */,
 				ED2C97F21D1D2C720099CE73 /* KingfisherExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		ED2C97CF1D1D2A420099CE73 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED2C97DF1D1D2A420099CE73 /* LaunchScreen.storyboard in Resources */,
-				ED2C97DC1D1D2A420099CE73 /* Assets.xcassets in Resources */,
-				ED2C97EC1D1D2C350099CE73 /* CollectionViewCell.xib in Resources */,
-				ED2C97DA1D1D2A420099CE73 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		ED2C97F11D1D2C720099CE73 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,67 +142,7 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		321790F1AD59DA78F6B48949 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		3A2F48C336488493BAC22387 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		81B0A68CEACEB4AD84C09370 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Example/Pods-Example-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		ED2C97CD1D1D2A420099CE73 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				ED2C97E71D1D2C140099CE73 /* Utilities.swift in Sources */,
-				ED2C97D71D1D2A420099CE73 /* ViewController.swift in Sources */,
-				ED2C97EB1D1D2C350099CE73 /* CollectionViewCell.swift in Sources */,
-				ED2C98071D1D30AC0099CE73 /* Transformer.swift in Sources */,
-				ED2C97D51D1D2A420099CE73 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		ED2C97EE1D1D2C720099CE73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -342,33 +156,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		ED2C97F91D1D2C720099CE73 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ED2C97F21D1D2C720099CE73 /* KingfisherExtension */;
-			targetProxy = ED2C97F81D1D2C720099CE73 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		ED2C97D81D1D2A420099CE73 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED2C97D91D1D2A420099CE73 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ED2C97DD1D1D2A420099CE73 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED2C97DE1D1D2A420099CE73 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ED2C97E11D1D2A420099CE73 /* Debug */ = {
@@ -454,32 +241,6 @@
 			};
 			name = Release;
 		};
-		ED2C97E41D1D2A420099CE73 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = top.limon.Example;
-				PRODUCT_NAME = KingfisherExtension;
-			};
-			name = Debug;
-		};
-		ED2C97E51D1D2A420099CE73 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
-				INFOPLIST_FILE = Example/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = top.limon.Example;
-				PRODUCT_NAME = KingfisherExtension;
-			};
-			name = Release;
-		};
 		ED2C97FD1D1D2C720099CE73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -537,15 +298,6 @@
 			buildConfigurations = (
 				ED2C97E11D1D2A420099CE73 /* Debug */,
 				ED2C97E21D1D2A420099CE73 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		ED2C97E31D1D2A420099CE73 /* Build configuration list for PBXNativeTarget "Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				ED2C97E41D1D2A420099CE73 /* Debug */,
-				ED2C97E51D1D2A420099CE73 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

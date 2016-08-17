@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  Example
 //
-//  Created by Limon on 6/24/16.
-//  Copyright © 2016 KingfisherExtension. All rights reserved.
+//  Created by Limon on 8/17/16.
+//  Copyright © 2016 Limon. All rights reserved.
 //
 
 import UIKit

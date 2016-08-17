@@ -4,11 +4,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 def pods
-    pod 'Kingfisher'
-end
-
-target 'KingfisherExtension' do
-    pods
+    pod 'KingfisherExtension', :path => '../'
 end
 
 target 'Example' do
