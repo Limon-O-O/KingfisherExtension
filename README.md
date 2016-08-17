@@ -50,7 +50,7 @@ pod 'KingfisherExtension', '~> 0.3.2'
 ### Carthage
 
 ```swift
-github "tristanhimmelman/AlamofireObjectMapper" ~> 3.0
+github "patricks/KingfisherExtension"
 ```
 
 ## Contact
