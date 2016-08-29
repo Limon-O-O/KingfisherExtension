@@ -35,5 +35,5 @@ extension Transformer: ImageResizable {
 
 struct DefaultImage {
     static let oval = UIImage(named: "default_avatar_oval")
-    static let pixel = UIImage(named: "pixel")!
+    static let pixel = UIImage(named: "pixel")
 }
