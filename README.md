@@ -45,7 +45,7 @@ Check the demo for more information.
 ### CocoaPods
 
 ```ruby
-pod 'KingfisherExtension', '~> 0.3.3'
+pod 'KingfisherExtension', '~> 0.3.4'
 ```
 
 ### Carthage
@@ -61,3 +61,5 @@ Contact me on [Twitter](https://twitter.com/Limon______) or [Weibo](http://weibo
 ## License
 
 KingfisherExtension is available under the MIT license. See the LICENSE file for more info.
+
+
