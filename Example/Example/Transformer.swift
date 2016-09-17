@@ -10,10 +10,10 @@ import UIKit
 import KingfisherExtension
 
 enum Style {
-    static let square: ImageStyle = .Rectangle(size: CGSize(width: 60.0, height: 60.0))
-    static let round1: ImageStyle = .RoundedRectangle(size: CGSize(width: 60.0, height: 60.0), cornerRadius: 8.0, borderWidth: 0)
-    static let round2: ImageStyle = .RoundedRectangle(size: CGSize(width: 60.0, height: 60.0), cornerRadius: 16.0, borderWidth: 0)
-    static let round3: ImageStyle = .RoundedRectangle(size: CGSize(width: 60.0, height: 60.0), cornerRadius: 60.0 * 0.5, borderWidth: 0)
+    static let square: ImageStyle = .rectangle(size: CGSize(width: 60.0, height: 60.0))
+    static let round1: ImageStyle = .roundedRectangle(size: CGSize(width: 60.0, height: 60.0), cornerRadius: 8.0, borderWidth: 0)
+    static let round2: ImageStyle = .roundedRectangle(size: CGSize(width: 60.0, height: 60.0), cornerRadius: 16.0, borderWidth: 0)
+    static let round3: ImageStyle = .roundedRectangle(size: CGSize(width: 60.0, height: 60.0), cornerRadius: 60.0 * 0.5, borderWidth: 0)
 }
 
 struct Transformer {
@@ -25,9 +25,9 @@ extension Transformer: ImageResizable {
     var placeholderImage: UIImage? {
 
         switch style {
-        case .Original, .Rectangle:
+        case .original, .rectangle:
             return DefaultImage.pixel
-        case .RoundedRectangle:
+        case .roundedRectangle:
             return DefaultImage.oval
         }
     }

@@ -13,13 +13,13 @@ public func ==(lhs: ImageStyle, rhs: ImageStyle) -> Bool {
 
     switch (lhs, rhs) {
 
-    case (.Original, .Original):
+    case (.original, .original):
         return true
 
-    case (.Rectangle(let sizeA), .Rectangle(let sizeB)) where sizeA == sizeB:
+    case (.rectangle(let sizeA), .rectangle(let sizeB)) where sizeA == sizeB:
         return true
 
-    case (.RoundedRectangle(let sizeA, let cornerRadiusA, let borderWidthA), .RoundedRectangle(let sizeB, let cornerRadiusB, let borderWidthB)) where (sizeA == sizeB && cornerRadiusA == cornerRadiusB && borderWidthA == borderWidthB):
+    case (.roundedRectangle(let sizeA, let cornerRadiusA, let borderWidthA), .roundedRectangle(let sizeB, let cornerRadiusB, let borderWidthB)) where (sizeA == sizeB && cornerRadiusA == cornerRadiusB && borderWidthA == borderWidthB):
         return true
 
     default:
@@ -29,21 +29,21 @@ public func ==(lhs: ImageStyle, rhs: ImageStyle) -> Bool {
 
 public enum ImageStyle: Equatable {
 
-    case Original
-    case Rectangle(size: CGSize)
-    case RoundedRectangle(size: CGSize, cornerRadius: CGFloat, borderWidth: CGFloat)
+    case original
+    case rectangle(size: CGSize)
+    case roundedRectangle(size: CGSize, cornerRadius: CGFloat, borderWidth: CGFloat)
 
     var hashString: String {
 
         switch self {
 
-        case .Original:
+        case .original:
             return "Original-"
 
-        case .Rectangle(let size):
+        case .rectangle(let size):
             return "Rectangle-\(size)-"
 
-        case .RoundedRectangle(let size, let cornerRadius, let borderWidth):
+        case .roundedRectangle(let size, let cornerRadius, let borderWidth):
             return "RoundedRectangle-\(size)-\(cornerRadius)-\(borderWidth)-"
         }
     }
@@ -67,11 +67,11 @@ extension ImageResizable {
     }
 
     public var localStyledImage: UIImage? {
-        return KingfisherManager.sharedManager.cache.retrieveImageInMemoryCacheForKey(key) ?? KingfisherManager.sharedManager.cache.retrieveImageInDiskCacheForKey(key, scale: UIScreen.mainScreen().scale)
+        return KingfisherManager.shared.cache.retrieveImageInMemoryCache(forKey: key) ?? KingfisherManager.shared.cache.retrieveImageInDiskCache(forKey: key, options: [.backgroundDecode])
     }
 
     public var localOriginalImage: UIImage? {
-        return KingfisherManager.sharedManager.cache.retrieveImageInMemoryCacheForKey(originalImageKey) ?? KingfisherManager.sharedManager.cache.retrieveImageInDiskCacheForKey(originalImageKey)
+        return KingfisherManager.shared.cache.retrieveImageInMemoryCache(forKey: originalImageKey) ?? KingfisherManager.shared.cache.retrieveImageInDiskCache(forKey: originalImageKey)
     }
 
     public var placeholderImage: UIImage? {
@@ -82,8 +82,8 @@ extension ImageResizable {
 
         guard !originalImageKey.isEmpty else { return }
 
-        KingfisherManager.sharedManager.cache.removeImageForKey(originalImageKey)
-        KingfisherManager.sharedManager.cache.removeImageForKey(key)
+        KingfisherManager.shared.cache.removeImage(forKey: originalImageKey)
+        KingfisherManager.shared.cache.removeImage(forKey: key)
     }
 }
 

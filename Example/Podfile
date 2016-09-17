@@ -5,6 +5,7 @@ use_frameworks!
 
 def pods
     pod 'KingfisherExtension', :path => '../'
+    pod 'Kingfisher'
 end
 
 target 'Example' do

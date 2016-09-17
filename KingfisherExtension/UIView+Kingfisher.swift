@@ -10,70 +10,70 @@ import Kingfisher
 
 extension UIView {
 
-    private func kfe_resizeImage(byOriginalImage originalImage: UIImage, transformer: ImageResizable, action: (reducedImage: UIImage) -> Void, toDisk: Bool, completionHandler: ((image: UIImage?) -> Void)?) {
+    fileprivate func kfe_resizeImage(byOriginalImage originalImage: UIImage, transformer: ImageResizable, action: @escaping (_ reducedImage: UIImage) -> Void, toDisk: Bool, completionHandler: ((_ image: UIImage?) -> Void)?) {
 
-        dispatch_async(dispatch_get_global_queue(QOS_CLASS_BACKGROUND, 0)) {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
 
             let reducedImage = originalImage.navi_avatarImageWithStyle(transformer.style)
 
             let showImage = {
 
-                UIView.transitionWithView(self, duration: 0.3, options: .TransitionCrossDissolve, animations: {
+                UIView.transition(with: self, duration: 0.3, options: .transitionCrossDissolve, animations: {
 
-                    action(reducedImage: reducedImage)
+                    action(reducedImage)
 
                 }, completion: { _ in
 
-                    completionHandler?(image: reducedImage)
+                    completionHandler?(reducedImage)
                 })
             }
 
-            KingfisherManager.sharedManager.cache.storeImage(reducedImage, originalData: nil, forKey: transformer.key, toDisk: toDisk, completionHandler: {
+            KingfisherManager.shared.cache.store(reducedImage, original: nil, forKey: transformer.key, toDisk: toDisk, completionHandler: {
                 showImage()
             })
         }
     }
 
-    func kfe_setImage(byTransformer transformer: ImageResizable, action: (image: UIImage?) -> Void, toDisk: Bool, completionHandler: ((image: UIImage?) -> Void)?) {
+    func kfe_setImage(byTransformer transformer: ImageResizable, action: @escaping (_ image: UIImage?) -> Void, toDisk: Bool, completionHandler: ((_ image: UIImage?) -> Void)?) {
 
-        guard !transformer.URLString.isEmpty, let URL = NSURL(string: transformer.URLString) else {
+        guard !transformer.URLString.isEmpty, let URL = URL(string: transformer.URLString) else {
 
             print("[KingfisherExtension] \((#file as NSString).lastPathComponent)[\(#line)], \(#function): Image Downlaod error: URL Error")
 
-            action(image: nil)
-            completionHandler?(image: nil)
+            action(nil)
+            completionHandler?(nil)
             return
         }
 
         if let localStyledImage = transformer.localStyledImage {
 
-            action(image: localStyledImage)
-            completionHandler?(image: localStyledImage)
+            action(localStyledImage)
+            completionHandler?(localStyledImage)
 
         } else if let localOriginalImage = transformer.localOriginalImage {
 
             kfe_resizeImage(byOriginalImage: localOriginalImage, transformer: transformer, action: { reducedImage in
 
-                action(image: reducedImage)
+                action(reducedImage)
 
             }, toDisk: toDisk, completionHandler: completionHandler)
 
         } else {
 
-            action(image: transformer.placeholderImage)
+            action(transformer.placeholderImage)
 
-            KingfisherManager.sharedManager.downloader.downloadImageWithURL(URL, options: [.BackgroundDecode], progressBlock: nil) { [weak self] image, error, imageURL, originalData in
+            KingfisherManager.shared.downloader.downloadImage(with: URL, options: [.backgroundDecode], progressBlock: nil) { [weak self] image, error, imageURL, originalData in
 
-                guard let originalImage = image, strongSelf = self else { return }
+                guard let originalImage = image, let strongSelf = self else { return }
 
                 strongSelf.kfe_resizeImage(byOriginalImage: originalImage, transformer: transformer, action: { reducedImage in
 
-                    action(image: reducedImage)
+                    action(reducedImage)
 
                 }, toDisk: toDisk, completionHandler: completionHandler)
 
                 if toDisk {
-                    KingfisherManager.sharedManager.cache.storeImage(originalImage, originalData: originalData, forKey: URL.absoluteString, toDisk: true, completionHandler: nil)
+                    KingfisherManager.shared.cache.store(originalImage, original: originalData, forKey: URL.absoluteString, toDisk: true, completionHandler: nil)
                 }
             }
         }

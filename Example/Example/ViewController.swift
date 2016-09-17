@@ -11,27 +11,27 @@ import KingfisherExtension
 
 class ViewController: UIViewController {
 
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet fileprivate weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.contentInset.top = 20.0
-        collectionView.registerNib(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.kfe_className)
+        collectionView.register(UINib(nibName: "CollectionViewCell", bundle: nil), forCellWithReuseIdentifier: CollectionViewCell.kfe_className)
     }
 }
 
 
 extension ViewController: UICollectionViewDataSource {
 
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
 
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let URLString = "https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/kingfisher-\(indexPath.row + 1).jpg"
+        let URLString = "https://raw.githubusercontent.com/onevcat/Kingfisher/master/images/kingfisher-\((indexPath as NSIndexPath).row + 1).jpg"
 
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(CollectionViewCell.kfe_className, forIndexPath: indexPath) as! CollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CollectionViewCell.kfe_className, for: indexPath) as! CollectionViewCell
 
         let squareTransformer = Transformer(URLString: URLString, style: Style.square)
         let transformer1 = Transformer(URLString: URLString, style: Style.round1)
@@ -52,8 +52,8 @@ extension ViewController: UICollectionViewDataSource {
 
 extension ViewController: UICollectionViewDelegateFlowLayout {
 
-    func collectionView(collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,
-        sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView,layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: ScreenWidth, height: 100)
     }
 }

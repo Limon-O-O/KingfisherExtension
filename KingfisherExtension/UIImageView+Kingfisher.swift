@@ -10,34 +10,34 @@ import Kingfisher
 
 extension UIImageView {
 
-    public func kfe_setImageWithURLString(URLString: String?,
+    public func kfe_setImageWithURLString(_ URLString: String?,
                                    placeholderImage: UIImage? = nil,
                                    optionsInfo: KingfisherOptionsInfo? = nil,
                                    progressBlock: DownloadProgressBlock? = nil,
                                    completionHandler: Kingfisher.CompletionHandler? = nil) -> RetrieveImageTask?
     {
 
-        guard let URLString = URLString, URL = NSURL(string: URLString) where !URLString.isEmpty else {
+        guard let URLString = URLString, let URL = URL(string: URLString) , !URLString.isEmpty else {
             print("[KingfisherExtension] \((#file as NSString).lastPathComponent)[\(#line)], \(#function): Image Downlaod error: URL Error")
             image = nil
             return nil
         }
 
-        guard let image = KingfisherManager.sharedManager.cache.retrieveImageInMemoryCacheForKey(URLString) ?? KingfisherManager.sharedManager.cache.retrieveImageInDiskCacheForKey(URLString) else {
+        guard let image = KingfisherManager.shared.cache.retrieveImageInMemoryCache(forKey: URLString) ?? KingfisherManager.shared.cache.retrieveImageInDiskCache(forKey: URLString) else {
 
             let optionInfoBuffer: KingfisherOptionsInfo = [
-                .BackgroundDecode,
-                .Transition(ImageTransition.Fade(0.35))
+                .backgroundDecode,
+                .transition(ImageTransition.fade(0.35))
             ]
 
-            return kf_setImageWithURL(URL,
-                                      placeholderImage: placeholderImage,
-                                      optionsInfo: optionsInfo ?? optionInfoBuffer,
-                                      progressBlock: progressBlock,
-                                      completionHandler: completionHandler)
+            return kf_setImage(with: URL,
+                               placeholder: placeholderImage,
+                               options: optionsInfo ?? optionInfoBuffer,
+                               progressBlock: progressBlock,
+                               completionHandler: completionHandler)
         }
 
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             UIView.performWithoutAnimation {
                 self.image = image
             }
@@ -46,7 +46,7 @@ extension UIImageView {
         return nil
     }
 
-    public func kfe_setImage(byTransformer transformer: ImageResizable, toDisk: Bool = true, completionHandler: ((image: UIImage?) -> Void)? = nil) {
+    public func kfe_setImage(byTransformer transformer: ImageResizable, toDisk: Bool = true, completionHandler: ((_ image: UIImage?) -> Void)? = nil) {
 
         kfe_setImage(byTransformer: transformer, action: { [weak self] image in
 
