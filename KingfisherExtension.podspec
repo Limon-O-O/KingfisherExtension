@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name        = "KingfisherExtension"
-  s.version     = "0.3.4"
+  s.version     = "1.0"
   s.summary     = "Kingfisher Extension"
 
   s.description = <<-DESC
