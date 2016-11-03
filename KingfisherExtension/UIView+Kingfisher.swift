@@ -10,7 +10,7 @@ import Kingfisher
 
 extension UIView {
 
-    fileprivate func kfe_resizeImage(byOriginalImage originalImage: UIImage, transformer: ImageResizable, action: @escaping (_ reducedImage: UIImage) -> Void, toDisk: Bool, completionHandler: ((_ image: UIImage?) -> Void)?) {
+    private func kfe_resizeImage(byOriginalImage originalImage: UIImage, transformer: ImageResizable, action: @escaping (_ reducedImage: UIImage) -> Void, toDisk: Bool, completionHandler: ((_ image: UIImage?) -> Void)?) {
 
         DispatchQueue.global(qos: DispatchQoS.QoSClass.background).async {
 

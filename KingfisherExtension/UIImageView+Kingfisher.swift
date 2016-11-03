@@ -14,7 +14,7 @@ extension UIImageView {
                                    placeholderImage: UIImage? = nil,
                                    optionsInfo: KingfisherOptionsInfo? = nil,
                                    progressBlock: DownloadProgressBlock? = nil,
-                                   completionHandler: Kingfisher.CompletionHandler? = nil) -> RetrieveImageTask?
+                                   completionHandler: CompletionHandler? = nil) -> RetrieveImageTask?
     {
 
         guard let URLString = URLString, let URL = URL(string: URLString) , !URLString.isEmpty else {

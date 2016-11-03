@@ -15,7 +15,7 @@ extension UIButton {
                                             placeholderImage: UIImage? = nil,
                                             optionsInfo: KingfisherOptionsInfo? = nil,
                                             progressBlock: DownloadProgressBlock? = nil,
-                                            completionHandler: Kingfisher.CompletionHandler? = nil) -> RetrieveImageTask?
+                                            completionHandler: CompletionHandler? = nil) -> RetrieveImageTask?
     {
         return kfe_setImageWithURLString(URLString, forState: state, isSetingBackgroundImage: true, placeholderImage: placeholderImage, optionsInfo: optionsInfo, progressBlock: progressBlock, completionHandler: completionHandler)
 
@@ -26,7 +26,7 @@ extension UIButton {
                                             placeholderImage: UIImage? = nil,
                                             optionsInfo: KingfisherOptionsInfo? = nil,
                                             progressBlock: DownloadProgressBlock? = nil,
-                                            completionHandler: Kingfisher.CompletionHandler? = nil) -> RetrieveImageTask?
+                                            completionHandler: CompletionHandler? = nil) -> RetrieveImageTask?
     {
 
         return kfe_setImageWithURLString(URLString, forState: state, isSetingBackgroundImage: false, placeholderImage: placeholderImage, optionsInfo: optionsInfo, progressBlock: progressBlock, completionHandler: completionHandler)
@@ -39,7 +39,7 @@ extension UIButton {
                                    placeholderImage: UIImage? = nil,
                                    optionsInfo: KingfisherOptionsInfo? = nil,
                                    progressBlock: DownloadProgressBlock? = nil,
-                                   completionHandler: Kingfisher.CompletionHandler? = nil) -> RetrieveImageTask?
+                                   completionHandler: CompletionHandler? = nil) -> RetrieveImageTask?
     {
 
         guard let URLString = URLString, let URL = URL(string: URLString) , !URLString.isEmpty else {
