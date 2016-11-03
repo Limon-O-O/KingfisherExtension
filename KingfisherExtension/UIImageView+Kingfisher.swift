@@ -17,7 +17,7 @@ extension UIImageView {
                                    completionHandler: CompletionHandler? = nil) -> RetrieveImageTask?
     {
 
-        guard let URLString = URLString, let URL = URL(string: URLString) , !URLString.isEmpty else {
+        guard let URLString = URLString, let URL = URL(string: URLString), !URLString.isEmpty else {
             print("[KingfisherExtension] \((#file as NSString).lastPathComponent)[\(#line)], \(#function): Image Downlaod error: URL Error")
             image = nil
             return nil
@@ -30,7 +30,7 @@ extension UIImageView {
                 .transition(ImageTransition.fade(0.35))
             ]
 
-            return kf_setImage(with: URL,
+            return kf.setImage(with: URL,
                                placeholder: placeholderImage,
                                options: optionsInfo ?? optionInfoBuffer,
                                progressBlock: progressBlock,

@@ -33,7 +33,7 @@ extension UIButton {
 
     }
 
-    fileprivate func kfe_setImageWithURLString(_ URLString: String?,
+    private func kfe_setImageWithURLString(_ URLString: String?,
                                    forState state: UIControlState,
                                    isSetingBackgroundImage: Bool,
                                    placeholderImage: UIImage? = nil,
@@ -42,7 +42,7 @@ extension UIButton {
                                    completionHandler: CompletionHandler? = nil) -> RetrieveImageTask?
     {
 
-        guard let URLString = URLString, let URL = URL(string: URLString) , !URLString.isEmpty else {
+        guard let URLString = URLString, let URL = URL(string: URLString), !URLString.isEmpty else {
             print("[KingfisherExtension] \((#file as NSString).lastPathComponent)[\(#line)], \(#function): Image Downlaod error: URL Error")
             isSetingBackgroundImage ? setBackgroundImage(nil, for: state) : setImage(nil, for: state)
             return nil
@@ -55,7 +55,7 @@ extension UIButton {
                 .transition(ImageTransition.fade(0.35))
             ]
 
-            return kf_setImage(with: URL,
+            return kf.setImage(with: URL,
                                for: state,
                                placeholder: placeholderImage,
                                options: optionsInfo ?? optionInfoBuffer,
