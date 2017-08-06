@@ -31,7 +31,7 @@ Swift 3.0
 
 	``` swift
 	let round: ImageStyle = .RoundedRectangle(size: CGSize(width: 60.0, height: 60.0), cornerRadius: 16.0, borderWidth: 0)
-  let transformer = Transformer(URLString: URLString, style: round)
+	let transformer = Transformer(URLString: URLString, style: round)
 
 	imageView.kfe_setImage(byTransformer: transformer)
 
