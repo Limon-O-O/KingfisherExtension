@@ -20,22 +20,20 @@ Swift 3.0
 
 1. Make your Transformer conform ImageReducible protocol.
 
-	``` swift
+``` swift
   struct Transformer: ImageReducible {
     let URLString: String
     let style: ImageStyle
   }
-	```
+```
 
 2. And, set transformer for your imageView
 
-	``` swift
-	let round: ImageStyle = .RoundedRectangle(size: CGSize(width: 60.0, height: 60.0), cornerRadius: 16.0, borderWidth: 0)
-	let transformer = Transformer(URLString: URLString, style: round)
-
-	imageView.kfe_setImage(byTransformer: transformer)
-
-	```
+``` swift
+let round: ImageStyle = .RoundedRectangle(size: CGSize(width: 60.0, height: 60.0), cornerRadius: 16.0, borderWidth: 0)
+let transformer = Transformer(URLString: URLString, style: round)
+imageView.kfe_setImage(byTransformer: transformer)
+```
 
 Check the demo for more information.
 
