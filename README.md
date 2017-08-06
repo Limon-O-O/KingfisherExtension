@@ -30,11 +30,10 @@ Swift 3.0
 2. And, set transformer for your imageView
 
 	``` swift
-
-  let round: ImageStyle = .RoundedRectangle(size: CGSize(width: 60.0, height: 60.0), cornerRadius: 16.0, borderWidth: 0)
+	let round: ImageStyle = .RoundedRectangle(size: CGSize(width: 60.0, height: 60.0), cornerRadius: 16.0, borderWidth: 0)
   let transformer = Transformer(URLString: URLString, style: round)
 
-  imageView.kfe_setImage(byTransformer: transformer)
+	imageView.kfe_setImage(byTransformer: transformer)
 
 	```
 
